@@ -1,0 +1,202 @@
+<html>
+
+<head>
+
+<title>G13</title>
+
+</head>
+
+<script>
+
+
+	function createBalloon() {
+    	let balloonContainer = document.getElementById("balloon");
+
+    	let newBalloon = document.createElement("img");
+
+    	newBalloon.src = "https://cdn.phototourl.com/free/2026-06-08-bb5033eb-9806-4f88-a397-42fce26667e6.png";
+
+    	newBalloon.style.width = "320px";
+    	newBalloon.style.height = "250px";
+    
+    	newBalloon.style.position = "absolute";
+    	newBalloon.style.bottom = "0px"; 
+	newBalloon.style.zIndex = "1";
+
+	
+    	let containerWidth = balloonContainer.offsetWidth; 
+    	let balloonWidth = 320;
+
+        console.log("容器寬度 (containerWidth):", containerWidth);
+   	console.log("氣球寬度 (balloonWidth):", balloonWidth);
+    
+    	let randomLeft = Math.floor(Math.random() * (containerWidth - balloonWidth));
+    	console.log("隨機左邊距 (randomLeft):", randomLeft);     
+    	
+	newBalloon.style.left = randomLeft + "px"; 
+ 
+    	balloonContainer.appendChild(newBalloon);
+
+	newBalloon.addEventListener("click", function() {
+        console.log("氣球被點擊了！"); 
+
+	clearInterval(moveInterval);
+
+        balloonContainer.removeChild(newBalloon); 
+
+    	});
+
+	
+
+    	console.log("生成一個氣球！");
+
+	
+    	let currentBottom = 0; 
+	let moveInterval = setInterval(function() {
+       		currentBottom = currentBottom + 1;        
+        	newBalloon.style.bottom = currentBottom + "px"; 
+      	
+           }, 20); 	
+
+	}
+
+
+	let randomInterval = Math.floor(Math.random() * 2000) + 1000;
+	setInterval(createBalloon, randomInterval);
+	
+
+
+</script>
+
+
+
+
+<style>
+
+	body {
+		margin: 0;
+    		padding: 0;  
+		position: relative;
+
+		background-image:url("https://cdn.phototourl.com/free/2026-06-08-ada243d9-0b74-4381-9f20-ab4a85fc52b1.png");
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+		text-align: center;
+
+}
+
+
+
+
+	#balloon {
+    	position: fixed;  
+    	top: 0;            
+    	left: 0;           
+    	width: 100vw;      
+    	height: 100vh;     
+    	overflow: hidden; 
+    	z-index:10;      
+}
+
+
+	@keyframes flashing {
+   	0% { opacity: 1; }
+    	50% { opacity: 0; }
+    	100% { opacity: 1; }
+}
+
+
+
+
+</style>
+
+
+<body>
+
+
+<h1 style="writing-mode: vertical-rl; color: white; font-family: 'PMingLiU', '新細明體', serif; font-size: 100px; position: absolute; top:100px; left:35px; animation: flashing 0.03s linear infinite;">台北　直直撞</h1>
+
+<h2 style="writing-mode: vertical-rl; color: white; font-family: 'PMingLiU', '新細明體', serif; font-size: 50px; position: absolute; top:375px; left:250px;animation: flashing 0.03s linear infinite;">我直直撞</h2>
+
+<h3 style="writing-mode: vertical-rl; color: white; font-family: 'PMingLiU', '新細明體', serif; font-size: 50px; position: absolute; top:95px; left:375px;animation: flashing 0.03s linear infinite;">我直直撞</h3>
+
+<h4 style="writing-mode: vertical-rl; color: white; font-family: 'PMingLiU', '新細明體', serif; font-size: 50px; position: absolute; top:800px; left:300px;animation: flashing 0.03s linear infinite;">我直直撞</h4>
+
+<h4 style="writing-mode: vertical-rl; color: white; font-family: 'PMingLiU', '新細明體', serif; font-size: 50px; position: absolute; top:1075px; left:120px;animation: flashing 0.03s linear infinite;">我直直撞</h4>
+
+<h5 style="writing-mode: vertical-rl; color: white; font-family: 'PMingLiU', '新細明體', serif; font-size: 50px; position: absolute; top:175px; right:75px;animation: flashing 0.03s linear infinite;">我直直撞</h5>
+
+<h6 style="writing-mode: vertical-rl; color: white; font-family: 'PMingLiU', '新細明體', serif; font-size: 50px; position: absolute; top:650px; right:0px;animation: flashing 0.03s linear infinite;">我直直撞</h6>
+
+
+<div style="position: fixed; bottom: 90; right: 60;z-index:100;">
+<a href="#PHOTOS">
+<button type="button" style="background-color:#FF359A; border:2px dashed white; border-radius:37.5px;font-weight: bold; width:75px; height:75px; color:white; display:block; margin-bottom: 20px;">概念照</button>
+</a>
+
+
+<button type="button" onclick="hide()" style="background-color:#FF359A; border:2px dashed white; border-radius:37.5px;font-weight: bold; width:75px; height:75px; color:white; display:block; margin-bottom: 20px;">期末呈現</button>
+
+<button type="button" onclick="change()" style="background-color:#FF359A; border:2px dashed white; border-radius:37.5px;font-weight: bold; width:75px; height:75px; color:white; display:block; margin-bottom: 20px;">成員介紹</button>
+
+
+</div>
+
+
+
+
+
+
+
+<audio src=""></audio>
+<img src="https://cdn.phototourl.com/free/2026-06-08-85fe7ce3-8061-4e18-b15e-5c992612ea72.png" style="width:100%; height:150px; display:block; margin-left:auto; margin-right:auto; margin-top:0;animation: flashing 0.03s linear infinite;"></img>
+
+
+<img src="https://cdn.phototourl.com/free/2026-06-08-0a0cd2ec-7e33-4aeb-952c-98d759ce1362.png" style="width:200px; height:100px; position:fixed; bottom:0; right:0;"></img>
+
+<img src="https://cdn.phototourl.com/free/2026-06-08-39b58ccf-1964-4129-a1bd-62f48ac61e5b.png" style="width:750px; height:1000px; display:block;  margin-left:auto; margin-right:200px; margin-top: 100px; position: relative; z-index: 20;"></img>
+
+<h4 style="writing-mode: vertical-rl; color: white; font-family: 'PMingLiU', '新細明體', serif; font-size: 50px; position: absolute; top:600px; left:470px; z-index: -1;animation: flashing 0.03s linear infinite;">我直直撞</h4>
+
+
+<div id="PHOTOS">
+
+	<h2 style="color:white;">PHOTOS</h2>
+	<img src="https://cdn.phototourl.com/free/2026-06-03-3ab2de7a-cf1c-4b13-b452-630d14fb536e.jpg" style=width:320px; height:480px;></img>
+	<img src="https://cdn.phototourl.com/free/2026-06-03-298c2c8a-ed79-48c7-8447-24031c49d80d.jpg" style=width:320px; height:480px;></img>
+	<img src="https://cdn.phototourl.com/free/2026-06-03-fb4a2ddd-f9e9-4044-9025-f0462cfca4b1.jpg" style=width:320px; height:480px;></img>
+
+</div>
+
+
+<img src="" ></video>
+<h2 style="color:white;">期末呈現</h2>
+<h2 style="color:white;">成員介紹</h2>
+<h2 style="color:white;">PHOTOS</h2>
+<h2 style="color:white;">PHOTOS</h2>
+<h2 style="color:white;">PHOTOS</h2>
+<h2 style="color:white;">PHOTOS</h2>
+<h2 style="color:white;">PHOTOS</h2>
+<h2 style="color:white;">PHOTOS</h2>
+<h2 style="color:white;">PHOTOS</h2>
+<h2 style="color:white;">PHOTOS</h2>
+
+
+
+
+<div id="balloon"></div>
+</body>
+
+</html>
+
+
+
+
+
+
+
+	
+
+
+
