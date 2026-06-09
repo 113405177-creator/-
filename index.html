@@ -2,7 +2,7 @@
 
 <head>
 
-<title>G13</title>
+<title>G13 台北直直撞</title>
 
 </head>
 
@@ -107,15 +107,19 @@
 }
 
 	#PHOTOS {
-    		
+    		position: relative;
  		margin-top: 500px;
-    		margin-bottom: 200px;
+    		margin-bottom: 0px;
 		text-align: center;
+		width: 1200px;  
+    		margin-left: auto;   
+    		margin-right: auto;
+		z-index: 10;
 		
 }
 
 	iframe {
-    		margin-top: 50px;      
+    		margin-top: 30px;      
     		margin-bottom: 50px;    
     		display: block;         
     		margin-left: auto;      
@@ -126,10 +130,14 @@
 
 
 	#SELF {
-    		
+    		position: relative;
  		margin-top: 300px;
     		margin-bottom: 100px;
 		text-align: center;
+		width: fit-content;
+	    	margin-left: auto;
+    		margin-right: auto;
+		z-index: 11;
 		
 }
 
@@ -162,10 +170,14 @@
 <button type="button" style="background-color:#FF359A; border:2px dashed white; border-radius:37.5px;font-weight: bold; width:75px; height:75px; color:white; display:block; margin-bottom: 20px;">概念照</button>
 </a>
 
-
+<a href="#VIEDO">
 <button type="button" onclick="hide()" style="background-color:#FF359A; border:2px dashed white; border-radius:37.5px;font-weight: bold; width:75px; height:75px; color:white; display:block; margin-bottom: 20px;">期末呈現</button>
+</a>
 
+
+<a href="#SELF">
 <button type="button" onclick="change()" style="background-color:#FF359A; border:2px dashed white; border-radius:37.5px;font-weight: bold; width:75px; height:75px; color:white; display:block; margin-bottom: 20px;">成員介紹</button>
+</a>
 
 
 </div>
@@ -181,6 +193,8 @@
 
 
 <img src="https://cdn.phototourl.com/free/2026-06-08-0a0cd2ec-7e33-4aeb-952c-98d759ce1362.png" style="width:200px; height:100px; position:fixed; bottom:0; right:0;"></img>
+<h2 style="color:#F00078;font-size: 25px; position:fixed; bottom:10px; left:30px;animation: flashing 1s linear infinite; -webkit-text-stroke: 0.1px white;">點點看氣球</h2>
+
 
 <img src="https://cdn.phototourl.com/free/2026-06-08-39b58ccf-1964-4129-a1bd-62f48ac61e5b.png" style="width:750px; height:1000px; display:block;  margin-left:auto; margin-right:200px; margin-top: 100px; position: relative; z-index: 20;"></img>
 
@@ -189,26 +203,44 @@
 
 <div id="PHOTOS">
 
-	<h2 style="color:white;">---------- PHOTOS ----------</h2>
-	<img src="https://cdn.phototourl.com/free/2026-06-03-3ab2de7a-cf1c-4b13-b452-630d14fb536e.jpg" style=width:320px; height:480px;></img>
-	<img src="https://cdn.phototourl.com/free/2026-06-03-298c2c8a-ed79-48c7-8447-24031c49d80d.jpg" style=width:320px; height:480px;></img>
-	<img src="https://cdn.phototourl.com/free/2026-06-03-fb4a2ddd-f9e9-4044-9025-f0462cfca4b1.jpg" style=width:320px; height:480px;></img>
+	<h2 style="color:white; margin-bottom:50px;font-size: 30px; width: fit-content; margin: 0 auto 50px auto;">---------- PHOTOS ----------</h2>
+	<img src="https://cdn.phototourl.com/free/2026-06-03-3ab2de7a-cf1c-4b13-b452-630d14fb536e.jpg" style="width:360px; height:240px; margin-right: 50px;"></img>
+	<img src="https://cdn.phototourl.com/free/2026-06-03-298c2c8a-ed79-48c7-8447-24031c49d80d.jpg" style="width:360px; height:240px; margin-right: 50px;"></img>
+	<img src="https://cdn.phototourl.com/free/2026-06-03-fb4a2ddd-f9e9-4044-9025-f0462cfca4b1.jpg" style="width:360px; height:240px;"></img>
 
 </div>
 
 
-<h2 style="color:white;">----------  期末呈現  ----------</h2>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/-tBcaUG6pH8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<div id="VIEDO">
+	<h2 style="color:white; margin-top:300px; margin-bottom:30px; font-size: 30px">----------  期末呈現  ----------</h2>
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/-tBcaUG6pH8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
 
 
 <div id="SELF">
 
-	<h2 style="color:white;text-align: center;">----------  成員介紹  ----------</h2>
-	<img src="https://cdn.phototourl.com/free/2026-06-09-7e401373-4563-464d-ab88-728bbecb13b7.jpg" style="width:200px; height:350px; margin-right:80px;" ></img>
+	<h2 style="color:white;text-align: center; margin-top:50px; margin-bottom:50px; font-size: 30px">----------  成員介紹  ----------</h2>
 
-	<img src="https://cdn.phototourl.com/free/2026-06-09-69e0eac6-2d44-48df-8024-e36ab18a2dc4.jpg" style="width:200px; height:350px; margin-right:80px;" ></img>
+	<div style="display: inline-block; text-align: center; margin-right: 80px;">
+        	<img src="https://cdn.phototourl.com/free/2026-06-09-a44b4f0b-d953-4962-bfc3-8ea541abf1c6.png" style="width:300px; height:300px;"></img>
+        	<p style="color: white; font-family: 'PMingLiU', '新細明體', serif; font-size: 30px; font-weight: bold;">卓祺叡</p>
+    	</div>
 
-	<img src="https://cdn.phototourl.com/free/2026-06-09-f272cc03-b62e-4de3-a983-28e0d1db592a.jpg" style="width:200px; height:350px;"></img>
+
+	<div style="display: inline-block; text-align: center; margin-right: 80px;">
+        	<img src="https://cdn.phototourl.com/free/2026-06-09-c2207d87-650a-400f-a989-1e2b17c78b12.png" style="width:300px; height:300px;"></img>
+        	<p style="color: white; font-family: 'PMingLiU', '新細明體', serif; font-size: 30px; font-weight: bold;">鄭媛真</p>
+    	</div>
+
+
+	<div style="display: inline-block; text-align: center;">
+        	<img src="https://cdn.phototourl.com/free/2026-06-09-6883b621-f4d5-4f6a-9ff5-4e691b645dc1.png" style="width:300px; height:300px;"></img>
+        	<p style="color: white; font-family: 'PMingLiU', '新細明體', serif; font-size: 30px; font-weight: bold;">蔡妍安</p>
+    	</div>
+
+	
 </div>
 
 
@@ -216,6 +248,7 @@
 
 <div id="balloon"></div>
 </body>
+
 
 </html>
 
